@@ -32,6 +32,8 @@ class Scene extends Component {
     });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
+    camera.position.x = 700;
+    camera.position.y = 700;
     camera.position.z = 1000;
 
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -51,11 +53,6 @@ class Scene extends Component {
     const animate = () => {
       requestAnimationFrame(animate);
       const zoom = controls.object.position.distanceTo(controls.target);
-      if (zoom <= 2 && !isMapView) {
-        // when we reach a specified zoom level, switch to map view
-        this.props.onZoomEnd();
-        isMapView = true;
-      }
       renderer.render(scene, camera);
     };
     this.container.appendChild(renderer.domElement);
@@ -65,12 +62,6 @@ class Scene extends Component {
 
   shouldComponentUpdate() {
     return false;
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.color !== nextProps.color) {
-      this.globe.material.color.setHex(nextProps.color);
-    }
   }
 }
 
