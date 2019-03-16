@@ -1,0 +1,16 @@
+{
+  "name": "threejs-react",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "mapbox-gl": "0.45.0",
+    "orbit-controls-es6": "1.0.10",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "three": "0.89.0"
+  }
+}

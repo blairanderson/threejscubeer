@@ -1,0 +1,25 @@
+{
+  "name": "threejs-react",
+  "version": "0.0.0",
+  "description": null,
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "mapbox-gl": "0.45.0",
+    "orbit-controls-es6": "1.0.10",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "three": "0.89.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
